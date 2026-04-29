@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  impostor:
+    image: YOUR_DOCKERHUB_USERNAME/REPO_NAME:latest
+    container_name: impostor
+    ports:
+      - "8080:8080"
+    sysctls:
+      net.ipv4.tcp_congestion_control: bbr
+      net.core.default_qdisc: fq
+    restart: always
+    
