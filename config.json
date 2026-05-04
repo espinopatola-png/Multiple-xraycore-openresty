@@ -1,26 +1,26 @@
 {
-    "log": {"loglevel": "none"},
+    "log": { "loglevel": "none" },
     "inbounds": [
         {
-            "port": 10001, "listen": "127.0.0.1", "protocol": "vless",
-            "settings": {"clients": [{"id": "550e8400-e29b-41d4-a716-446655440000"}], "decryption": "none"},
-            "streamSettings": {"network": "ws", "wsSettings": {"path": "/vless"}}
+            "port": 10001, "listen": "127.0.0.1", "protocol": "trojan",
+            "settings": { "clients": [{"password": "mysecretpassword"}] },
+            "streamSettings": { "network": "ws", "wsSettings": { "path": "/tr" } }
         },
         {
-            "port": 10002, "listen": "127.0.0.1", "protocol": "vmess",
-            "settings": {"clients": [{"id": "550e8400-e29b-41d4-a716-446655440000"}]},
-            "streamSettings": {"network": "ws", "wsSettings": {"path": "/vmess"}}
+            "port": 10002, "listen": "127.0.0.1", "protocol": "vless",
+            "settings": { "clients": [{"id": "550e8400-e29b-41d4-a716-446655440000"}], "decryption": "none" },
+            "streamSettings": { "network": "ws", "wsSettings": { "path": "/vl" } }
         },
         {
-            "port": 10003, "listen": "127.0.0.1", "protocol": "trojan",
-            "settings": {"clients": [{"password": "Impo"}]},
-            "streamSettings": {"network": "ws", "wsSettings": {"path": "/trojan"}}
+            "port": 10003, "listen": "127.0.0.1", "protocol": "vmess",
+            "settings": { "clients": [{"id": "550e8400-e29b-41d4-a716-446655440000", "alterId": 0}] },
+            "streamSettings": { "network": "ws", "wsSettings": { "path": "/vm" } }
         },
         {
             "port": 10004, "listen": "127.0.0.1", "protocol": "shadowsocks",
-            "settings": {"method": "chacha20-ietf-poly1305", "password": "Impo"},
-            "streamSettings": {"network": "ws", "wsSettings": {"path": "/ss"}}
+            "settings": { "method": "chacha20-ietf-poly1305", "password": "mysecretpassword" },
+            "streamSettings": { "network": "ws", "wsSettings": { "path": "/ss" } }
         }
     ],
-    "outbounds": [{"protocol": "freedom"}]
+    "outbounds": [{ "protocol": "freedom" }]
 }
