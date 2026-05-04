@@ -4,22 +4,28 @@
         {
             "port": 10001, "listen": "127.0.0.1", "protocol": "vless",
             "settings": {"clients": [{"id": "550e8400-e29b-41d4-a716-446655440000"}], "decryption": "none"},
-            "streamSettings": {"network": "ws", "wsSettings": {"path": "/vlessimpostor"}}
+            "streamSettings": {"network": "ws", "wsSettings": {"path": "/vl-imp"}}
         },
         {
             "port": 10002, "listen": "127.0.0.1", "protocol": "vmess",
             "settings": {"clients": [{"id": "550e8400-e29b-41d4-a716-446655440000"}]},
-            "streamSettings": {"network": "ws", "wsSettings": {"path": "/vmessimpostor"}}
+            "streamSettings": {"network": "ws", "wsSettings": {"path": "/v-imp"}}
         },
         {
             "port": 10003, "listen": "127.0.0.1", "protocol": "trojan",
             "settings": {"clients": [{"password": "impostor"}]},
-            "streamSettings": {"network": "ws", "wsSettings": {"path": "/trojanimpostor"}}
+            "streamSettings": {"network": "ws", "wsSettings": {"path": "/tr-imp"}}
         },
         {
             "port": 10004, "listen": "127.0.0.1", "protocol": "shadowsocks",
-            "settings": {"method": "2022-blake3-aes-128-gcm", "password": "impostor1234567890123456"},
-            "streamSettings": {"network": "ws", "wsSettings": {"path": "/ssimpostor", "headers": {"Host": "www.wikipedia.org"}}}
+            "settings": {
+                "method": "chacha20-ietf-poly1305", 
+                "password": "mysecretpassword"
+            },
+            "streamSettings": {
+                "network": "ws", 
+                "wsSettings": {"path": "/ss-imp"}
+            }
         }
     ],
     "outbounds": [{"protocol": "freedom"}]
