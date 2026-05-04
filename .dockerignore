@@ -1,0 +1,12 @@
+.git
+.github
+node_modules
+*.log
+*.tmp
+*.bak
+*.zip
+*.tar.gz
+.DS_Store
+__pycache__
+*.pyc
+
