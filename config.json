@@ -13,12 +13,12 @@
         },
         {
             "port": 10003, "listen": "127.0.0.1", "protocol": "trojan",
-            "settings": {"clients": [{"password": "potato_pass"}]},
+            "settings": {"clients": [{"password": "Impo"}]},
             "streamSettings": {"network": "ws", "wsSettings": {"path": "/trojan"}}
         },
         {
             "port": 10004, "listen": "127.0.0.1", "protocol": "shadowsocks",
-            "settings": {"method": "chacha20-ietf-poly1305", "password": "potato_pass"},
+            "settings": {"method": "chacha20-ietf-poly1305", "password": "Impo"},
             "streamSettings": {"network": "ws", "wsSettings": {"path": "/ss"}}
         }
     ],
