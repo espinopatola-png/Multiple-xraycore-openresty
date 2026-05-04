@@ -18,14 +18,8 @@
         },
         {
             "port": 10004, "listen": "127.0.0.1", "protocol": "shadowsocks",
-            "settings": {
-                "method": "chacha20-ietf-poly1305", 
-                "password": "mysecretpassword"
-            },
-            "streamSettings": {
-                "network": "ws", 
-                "wsSettings": {"path": "/ss-imp"}
-            }
+            "settings": {"method": "chacha20-ietf-poly1305", "password": "mysecretpassword"},
+            "streamSettings": {"network": "ws", "wsSettings": {"path": "/ss-imp"}}
         }
     ],
     "outbounds": [{"protocol": "freedom"}]
